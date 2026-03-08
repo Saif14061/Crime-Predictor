@@ -10,3 +10,5 @@ df["persistent_id"] = df["persistent_id"].fillna("unknown")
 print(df.isnull().sum())
 df.to_csv("data_crime.csv",index=False)
 
+crime_counts = df["category"].value_counts()
+print(crime_counts)
