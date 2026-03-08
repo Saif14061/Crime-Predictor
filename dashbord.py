@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import ast
-
+from sklearn.linear_model import LinearRegression
+from predict import predict_machine
 
 st.title("London Crime Dashbord")
 df = pd.read_csv("data_crime.csv")
@@ -17,3 +18,6 @@ st.map(df, latitude="lat", longitude="lon", zoom=10)
 
 #print(df["lat"].head())
 #print(df["lon"].head())
+
+prediction = predict_machine()
+st.metric("predicted crime for the next month" , prediction)
