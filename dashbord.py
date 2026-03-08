@@ -15,5 +15,5 @@ df["lat"] =df["location"].apply(lambda x: float(ast.literal_eval(x)["latitude"])
 df["lon"] =df["location"].apply(lambda x: float(ast.literal_eval(x)["longitude"]))
 st.map(df, latitude="lat", longitude="lon", zoom=10)
 
-print(df["lat"].head())
-print(df["lon"].head())
+#print(df["lat"].head())
+#print(df["lon"].head())
